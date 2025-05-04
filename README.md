@@ -94,7 +94,6 @@ Installing Dependencies
 Install all required packages using requirements.txt:
 
 pip install -r requirements.txt
-Make sure your requirements.txt includes at least:
 
 Setting Environment Variables
 Create a .env file in your project root with the following variables:
