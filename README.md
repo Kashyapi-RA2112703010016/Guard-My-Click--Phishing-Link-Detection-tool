@@ -1,112 +1,137 @@
-**Project Description: GUARD MY CLICK - AI Email Scanner**
-
+GUARD MY CLICK - AI Email Scanner
 GUARD MY CLICK is an advanced, automated phishing prevention tool designed to safeguard users from deceptive email scams using state-of-the-art machine learning techniques. This project leverages a combination of AI-powered algorithms and fuzzy logic to perform thorough, real-time scanning of email inboxes, identifying potential phishing attempts before they can cause harm.
 
-**Key Features**
+🔑 Key Features
+📬 Automated Inbox Scanning: Scans the user's Gmail inbox with a single click, identifying phishing threats ethically and efficiently.
 
-Automated Inbox Scanning: The system performs an ethical scan of the user's email inbox with a single click, analyzing each email for phishing risks.
+🧠 Machine Learning Integration: Uses a trained ML model to analyze URLs and email metadata, offering high-accuracy phishing probability scores.
 
-Machine Learning Integration: Utilizes a trained machine learning model that evaluates URLs and email metadata to assign a phishing probability score, improving detection accuracy beyond traditional rule-based methods.
+🌀 Fuzzy Logic Scoring: Evaluates URL structures with heuristic techniques to catch obfuscated and disguised phishing URLs.
 
-Fuzzy Logic Scoring: Complements ML predictions by assessing URLs with fuzzy risk scoring techniques to capture obfuscated phishing attempts.
+⚖️ Combined Risk Analysis: Merges ML and fuzzy logic scores for robust and comprehensive threat detection.
 
-Combined Risk Analysis: Merges ML and fuzzy scores to provide a comprehensive risk assessment, improving the reliability of phishing detection.
+📊 Detailed Per-URL Breakdown: Visualizes the threat level of each URL using radar charts, heatmaps, and other interactive data graphics.
 
-Detailed Per-URL Breakdown: Presents a granular analysis for every suspicious URL with visualizations such as radar charts and heatmaps showing feature importance and risk factors.
+📈 Interactive Dashboard: User-friendly web interface built with Bootstrap 5 and Chart.js, offering real-time scanning results and insights.
 
-Interactive Dashboard: Displays scan results in a user-friendly interface, including summary tables, alert modals, and graphical insights using Chart.js.
+🚨 User Notifications: Real-time browser alerts and optional email notifications for detected threats.
 
-User Notifications: Supports desktop browser notifications and email alerts to immediately inform users of detected phishing threats.
+🧾 Downloadable PDF Reports: Generate and download full scan summaries for reporting or review using jsPDF and html2canvas.
 
-Downloadable PDF Reports: Users can export detailed scan summaries and risk analyses in PDF format for record-keeping or further review.
+📱 Responsive Design: Modern, dark-themed UI optimized for both desktop and mobile devices.
 
-Responsive Design: Built with Bootstrap and a dark theme to ensure accessibility and modern UI experience on all devices.
+🛠 Technologies Used
+Frontend:
 
-**Technologies Used**
+HTML5, CSS3 (Bootstrap 5)
 
-Frontend: HTML5, CSS3 (Bootstrap 5), JavaScript, Chart.js for data visualization, jspdf and html2canvas for PDF generation.
+JavaScript
 
-Backend (implied): Likely a REST API that processes scan requests and returns JSON-formatted phishing analysis results.
+Chart.js (visualizations)
 
-Machine Learning Model: A custom phishing detection model combining supervised learning classifiers and heuristic scoring.
+jsPDF + html2canvas (PDF generation)
 
-Notification System: Web Push Notifications and Email API integration for timely alerts.
+Backend:
 
-Security Focus: Ethical scanning practices ensure privacy and data security during email analysis.
+Flask (Python Web Framework)
 
-**How It Works**
+REST API for scan processing
 
-User initiates scan by clicking the "Start Ethical Scan" button.
+Gmail API for email access
 
-The frontend calls a backend /scan endpoint that fetches emails and analyzes each message.
+AI/ML:
 
-URLs extracted from emails undergo machine learning evaluation and fuzzy scoring.
+Hybrid Model: Supervised Learning + Fuzzy Logic Scoring
 
-Results, including phishing likelihood and feature importance, are returned and displayed.
+URL-based phishing detection with feature importance scoring
 
-If phishing emails are detected, the user receives alerts via modal popups, browser notifications, and optional email notifications.
+Notifications:
 
-Users can explore detailed URL-level analysis with interactive charts and export the full report as a PDF.
+Web Push Notifications
 
+Email Alerts (via SMTP + secure App Passwords)
 
+🧠 How It Works
+User clicks "Start Ethical Scan".
 
-## Getting Started
+Emails are retrieved via the Gmail API.
 
-### Prerequisites
+Each email’s URLs are extracted and analyzed using ML and fuzzy scoring.
 
-- Python 3.8 or higher
-- A Google account to set up Gmail API access
-- `pip` package manager
+A combined phishing risk score is computed and visualized.
 
----
+Alerts are triggered if threats are detected.
 
-### Setting Up Gmail API Credentials
+Full scan results can be explored in the dashboard or exported as a PDF.
 
-1. Go to the [Google Cloud Console](https://console.cloud.google.com/).
-2. Create a new project or select an existing one.
-3. Navigate to **APIs & Services > Credentials**.
-4. Click **Create Credentials > OAuth client ID**.
-5. Choose **Desktop app** and give it a name.
-6. Download the `credentials.json` file.
-7. Place `credentials.json` in your project root directory.
+🚀 Getting Started
+✅ Prerequisites
+Python 3.8+
 
-The first time you run the app, it will prompt you to authorize access to your Gmail account. After authorization, a `token.json` file will be saved locally to maintain authentication.
+pip
 
----
+Google Account with Gmail
 
-### Setting Up the Virtual Environment
+Git installed
 
-1. Open a terminal/command prompt in your project folder.
-2. Create a virtual environment:
+🔓 Setting Up Gmail API
+Go to Google Cloud Console.
 
-   ```bash
-   python -m venv venv
-Activate the virtual environment:
+Create/select a project > APIs & Services > Credentials.
 
-On Windows:
+Click Create Credentials > OAuth client ID.
 
+Select Desktop App, provide a name, and download the credentials.json.
+
+Place credentials.json in the project root.
+
+On first run, it will prompt for Gmail authentication and save token.json.
+
+📦 Setting Up the Project
+bash
+Copy
+Edit
+# Clone the repository
+git clone https://github.com/RA2112701010026/Phishing-Link-Detection-Using-a-Hybrid-ML-Fuzzy-Logic-Model-Integrated-with-Gmail-API.git
+
+cd Phishing-Link-Detection-Using-a-Hybrid-ML-Fuzzy-Logic-Model-Integrated-with-Gmail-API
+
+# Create virtual environment
+python -m venv venv
+
+# Activate environment
+# Windows
 venv\Scripts\activate
-On macOS/Linux:
-
+# macOS/Linux
 source venv/bin/activate
 
-Installing Dependencies
-Install all required packages using requirements.txt:
-
+# Install dependencies
 pip install -r requirements.txt
+🔐 Environment Variables
+Create a .env file in the root directory with:
 
-Setting Environment Variables
-Create a .env file in your project root with the following variables:
-
+ini
+Copy
+Edit
 SENDER_EMAIL=your_email@gmail.com
 RECEIVER_EMAIL=receiver_email@gmail.com
-EMAIL_PASSWORD=your_email_app_password
-Note: For EMAIL_PASSWORD, you may need to create an App Password if you use Gmail with 2FA enabled.
+EMAIL_PASSWORD=your_app_password
+Note: If using Gmail with 2FA, generate an App Password.
 
-Running the Application
-Activate the virtual environment (if not already active).
+🏃 Running the Application
+bash
+Copy
+Edit
+# Activate environment if not already
+source venv/bin/activate  # or venv\Scripts\activate on Windows
 
-Run the Flask app:
+# Start Flask server
 python app.py
-Open your browser and visit:
-http://127.0.0.1:5000/
+Visit http://127.0.0.1:5000/ in your browser to launch the app.
+
+👨‍💻 About Me
+Name: Undekoti Rowan Ronald
+Role: AI Engineer
+Email: uu0712@srmist.edu.in
+GitHub: [RA2112701010026](https://github.com/RA2112701010026)
+LinkedIn: linkedin.com/in/undekoti-rowan-ronald
