@@ -131,7 +131,11 @@ Visit http://127.0.0.1:5000/ in your browser to launch the app.
 
 👨‍💻 About Me
 Name: Undekoti Rowan Ronald
+
 Role: AI Engineer
+
 Email: uu0712@srmist.edu.in
+
 GitHub: [RA2112701010026](https://github.com/RA2112701010026)
+
 LinkedIn: linkedin.com/in/undekoti-rowan-ronald
