@@ -131,11 +131,19 @@ Visit http://127.0.0.1:5000/ in your browser to launch the app.
 
 👨‍💻 About Me
 Name: Undekoti Rowan Ronald
-
 Role: AI Engineer
-
 Email: uu0712@srmist.edu.in
+LinkedIn: linkedin.com/in/undekoti-rowan-ronald
+
+
+Name: Kashyapi Reddy 
+Role: Cyber Security Engineer
+Email: yp2580@srmist.edu.in
+
+
+
+
 
 GitHub: [RA2112701010026](https://github.com/RA2112701010026)
+GitHub: [[RA2112701010026](https://github.com/Kashyapi-RA2112703010016)
 
-LinkedIn: linkedin.com/in/undekoti-rowan-ronald
